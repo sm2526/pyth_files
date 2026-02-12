@@ -1,0 +1,58 @@
+#Assignment for a calculator using a loop to either continue or break
+
+
+def add_num(a, b):
+    total = a + b
+    print(f"The sum is: {total}")
+
+def sub_num(a, b):
+    difference = a - b
+    print(f"The difference is: {difference}")
+
+def product_num(a, b):
+    product = a * b
+    print(f"The product is: {product}")
+
+def divide_num(a, b):
+    if b == 0:
+        print("Error: Cannot divide by zero")
+    else:
+        division = a / b
+        print(f"The division result is: {division}")
+
+def mod_num(a, b):
+    modulus = a % b
+    print(f"The modulus is: {modulus}")
+    
+while True:
+ print("1. For Add (A + B)")
+ print("2. For Subtract (A - B)")
+ print("3. For Product (A * B)")
+ print("4. For Divide (A / B)")
+ print("5. For Modulus (A % B)")
+
+ option = int(input("Kindly input option: "))
+ x = int(input("Enter A: "))
+ y = int(input("Enter B: "))
+
+ match option:
+    case 1:
+        add_num(x, y)
+    case 2:
+        sub_num(x, y)
+    case 3:
+        product_num(x, y)
+    case 4:
+        divide_num(x, y)
+    case 5:
+        mod_num(x, y)
+    case _:
+        print("Invalid option")
+        
+ question = input("Do you want to continue(yes or no)?: ")
+ if question != "yes" :
+    print("You have reached the end")
+ else:
+     break
+  
+ 
